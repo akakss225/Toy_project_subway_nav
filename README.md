@@ -51,3 +51,12 @@ location
 
 
 # 본격적으로 알고리즘을 구현해보자
+
+- Dijkstra Algorithm의 뼈대를 만든다. 객체를 적극 활용! 추가적으로 출력까지 해본다.
+
+<img width="1007" alt="스크린샷 2022-03-26 19 15 49" src="https://user-images.githubusercontent.com/78843098/160235042-0ecb0058-d9d2-4615-822d-0eb0bf71c55d.png">
+
+- 출력 결과(우웩)
+
+<img width="1132" alt="스크린샷 2022-03-26 19 17 40" src="https://user-images.githubusercontent.com/78843098/160235104-d86c5773-4629-41de-8ab4-97c04afef190.png">
+

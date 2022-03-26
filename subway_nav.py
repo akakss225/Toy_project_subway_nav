@@ -94,15 +94,32 @@ class WindowClass(QMainWindow, form_class):
         end = self.selected.item(1).text()
         
         
-        
-        
-        
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    myWindow = WindowClass()
-    myWindow.show()
-    app.exec_()
+class Dijkstra:
+    def __init__(self, node):
+        # 생성자를 만들때, 그래프를 입력받고, 그래프의 각 노드를 딕셔너리 형태로 만듬.
+        
+        # 역
+        self.g = {}
+        # 최단거리를 구하기 위한 딕셔너리
+        self.dist = {}
+        
+        for n in node:
+            # 일종의 HashTableMap
+            self.g[n] = {}
+            # 초기 거리를 무한대로 설정하고, 방문하지 않음을 넣어줌.
+            self.dist[n] = [float('inf'), "none"]
+
+dj = Dijkstra(node)
+print(dj.g)
+print(dj.dist)
+
+
+# if __name__ == '__main__':
+#     app = QApplication(sys.argv)
+#     myWindow = WindowClass()
+#     myWindow.show()
+#     app.exec_()
     
 station_name.close()
 station_loc.close()
