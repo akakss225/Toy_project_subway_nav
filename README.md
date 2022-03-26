@@ -12,3 +12,10 @@
 ### PyQt5를 활용한 UI 설계
 
 ![ㅁㄴㅇㅁㄴㅇ  Untitled](https://user-images.githubusercontent.com/78843098/160106279-2b0eb46e-603a-458b-9312-945272f85d9a.jpg)
+
+
+### 코딩 시작
+
+- 우선 개발에 필요한 라이브러리들을 import 해준다.
+
+<img width="1015" alt="스크린샷 2022-03-26 18 13 33" src="https://user-images.githubusercontent.com/78843098/160233004-cdad055b-d3a2-4357-aea3-dd9b511e6ca9.png">

@@ -18,14 +18,15 @@ from PyQt5 import uic
 
 
 # PyQt5를 활용해 만든 간단한 UI를 불러옴
-form_class = uic.loadUiType('Subway.ui')
+form_class = uic.loadUiType('Subway.ui')[0]
 
 # 지하철 역 이름 csv파일을 열어줌
-station_name = open('subway.csv')
+# 이때 encoding='UTF-8-sig'로 설정해주어 첫 데이터 앞의 \ufeff를 지워줌 << 텍스트 읽을때 딸려옴
+station_name = open('subway.csv', encoding='UTF-8-sig')
 graph = list(csv.reader(station_name))
 
 # 지하철 역 좌표 csv파일을 열어줌
-station_loc = open('subwayLocation.csv')
+station_loc = open('subwayLocation.csv', encoding='UTF-8-sig')
 location = list(csv.reader(station_loc))
 
 # 지하철 역 이름 csv는 [현재역, 다른역, 거리] 로 저장되어있음
@@ -48,9 +49,30 @@ class WindowClass(QMainWindow, form_class):
         super().__init__()
         self.setupUi(self)
         
+        global graph
+        
         # 지하철 역 이름을 모두 PyQt 의 stations(지하철 역 List) 영역에 업로드
         for i in graph:
             # 지하철 역 이름이 담길 list 이름은 stations이라고 만들어줬음.
             self.stations.addItem(i[0])
             
-print(graph)
+        # 선택버튼 클릭시 실행될 메소드
+        def locationAdd(self):
+            # 현재 stations에 존재하는 값을 selected에 addItem해주는 코드
+            self.selected.addItem(graph[self.stations.currentRow()][0])
+        
+        # 삭제 버튼 클릭시 실행될 메소드
+        def locationDelete(self):
+            self.removeItemRow = self.selected.currentRow()
+            self.selected.takeItem(self.removeItemRow)
+        
+        # 실행버튼 클릭시 실행될 메소드
+        def programRun(self):
+            start = self.selected.item(0).text()
+            end = self.selected.item(1).text()
+            
+        
+        # 선택 버튼 클릭시
+        self.btn_sel.clicked.connect(self.locationAdd)
+        
+print(node)
