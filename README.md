@@ -37,3 +37,14 @@ location
 
 <img width="1131" alt="스크린샷 2022-03-26 18 14 42" src="https://user-images.githubusercontent.com/78843098/160233220-7ba2f992-3203-422d-a384-fe7e3a348f60.png">
 
+<hr>
+
+- WindowClass 를 생성해 상속을 받고, 만들어놓은 UI에 리스트를 추가해서 출력해본다.
+
+<img width="1006" alt="스크린샷 2022-03-26 18 45 49" src="https://user-images.githubusercontent.com/78843098/160234261-01fba1d6-7028-4a15-9f83-15cfa9e3b8d2.png">
+
+<img width="1006" alt="스크린샷 2022-03-26 18 51 38" src="https://user-images.githubusercontent.com/78843098/160234254-f75b303d-9158-4c2b-ae7a-8b800dd0193c.png">
+
+### 🔥🔥 성공적
+
+<img width="518" alt="스크린샷 2022-03-26 18 53 13" src="https://user-images.githubusercontent.com/78843098/160234304-b65a5e7a-4260-4aca-a26e-f3fab9128c49.png">
