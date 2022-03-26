@@ -51,11 +51,11 @@ class WindowClass(QMainWindow, form_class):
         super().__init__()
         self.setupUi(self)
         
-        global graph
+        global node
         # 지하철 역 이름을 모두 PyQt 의 stations(지하철 역 List) 영역에 업로드
-        for i in graph:
+        for i in node:
             # 지하철 역 이름이 담길 list 이름은 stations이라고 만들어줬음.
-            self.stations.addItem(i[0])
+            self.stations.addItem(i)
         
         
     # 선택버튼 클릭시 실행될 메소드
@@ -114,20 +114,24 @@ class Dijkstra:
         for i in graph:
             self.setEdge(i[0], i[1], int(i[2]))
     
-    def setEdge(self, start, end, w):
-        self.g[start][end] = w
-        self.g[end][start] = w
+    def setEdge(self, start, end, distance):
+        self.g[start][end] = distance
+        self.g[end][start] = distance
+    
+    def getPath(self, start, end):
+        dictfilt = lambda x, y: dict([(i, x[i]) for i in x if i in set(y)])
+        return dictfilt
 
-dj = Dijkstra(node)
-print(dj.g)
+# dj = Dijkstra(node)
+# print(dj.g)
 
 
 
-# if __name__ == '__main__':
-#     app = QApplication(sys.argv)
-#     myWindow = WindowClass()
-#     myWindow.show()
-#     app.exec_()
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    myWindow = WindowClass()
+    myWindow.show()
+    app.exec_()
     
 station_name.close()
 station_loc.close()

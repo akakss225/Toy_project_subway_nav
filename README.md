@@ -41,13 +41,13 @@ location
 
 - WindowClass 를 생성해 상속을 받고, 만들어놓은 UI에 리스트를 추가해서 출력해본다.
 
-<img width="1007" alt="스크린샷 2022-03-26 19 06 33" src="https://user-images.githubusercontent.com/78843098/160234750-f17c4d5f-3715-4e3b-8d89-128d78e6b12c.png">
+<img width="519" alt="스크린샷 2022-03-26 20 09 07" src="https://user-images.githubusercontent.com/78843098/160236742-aa0728b5-c36f-42f5-9d6d-b6d3e14df7dc.png">
 
 <img width="1006" alt="스크린샷 2022-03-26 18 51 38" src="https://user-images.githubusercontent.com/78843098/160234254-f75b303d-9158-4c2b-ae7a-8b800dd0193c.png">
 
 ### 🔥🔥 성공적
 
-<img width="518" alt="스크린샷 2022-03-26 18 53 13" src="https://user-images.githubusercontent.com/78843098/160234304-b65a5e7a-4260-4aca-a26e-f3fab9128c49.png">
+<img width="1000" alt="스크린샷 2022-03-26 20 08 51" src="https://user-images.githubusercontent.com/78843098/160236745-8dccb965-59df-4d76-9f3b-deea0c4d5879.png">
 
 
 # 본격적으로 알고리즘을 구현해보자
