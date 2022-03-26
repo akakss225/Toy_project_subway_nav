@@ -109,10 +109,18 @@ class Dijkstra:
             self.g[n] = {}
             # 초기 거리를 무한대로 설정하고, 방문하지 않음을 넣어줌.
             self.dist[n] = [float('inf'), "none"]
+        
+        global graph
+        for i in graph:
+            self.setEdge(i[0], i[1], int(i[2]))
+    
+    def setEdge(self, start, end, w):
+        self.g[start][end] = w
+        self.g[end][start] = w
 
 dj = Dijkstra(node)
 print(dj.g)
-print(dj.dist)
+
 
 
 # if __name__ == '__main__':

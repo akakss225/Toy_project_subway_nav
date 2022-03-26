@@ -60,3 +60,11 @@ location
 
 <img width="1132" alt="스크린샷 2022-03-26 19 17 40" src="https://user-images.githubusercontent.com/78843098/160235104-d86c5773-4629-41de-8ab4-97c04afef190.png">
 
+
+- 알고리즘에 가지고있는 데이터를 이용해 각 역간 걸리는 시간을 설정해주는 <i>setEdge()</i> 를 생성해준다.
+
+<img width="999" alt="스크린샷 2022-03-26 19 50 20" src="https://user-images.githubusercontent.com/78843098/160236175-660374ab-60cf-4ee9-955e-94fbf9799132.png">
+
+- 출력 결과
+
+<img width="1132" alt="스크린샷 2022-03-26 19 50 42" src="https://user-images.githubusercontent.com/78843098/160236225-ae118520-f3c3-4859-89f6-942078278d78.png">
