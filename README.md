@@ -14,7 +14,7 @@
 
 <hr>
 
-## 💻UI 에 역 list를 띄워보자
+# 💻UI 에 역 list를 띄워보자
 
 - 우선 개발에 필요한 라이브러리들을 import 해준다.
 
@@ -50,4 +50,4 @@ location
 <img width="518" alt="스크린샷 2022-03-26 18 53 13" src="https://user-images.githubusercontent.com/78843098/160234304-b65a5e7a-4260-4aca-a26e-f3fab9128c49.png">
 
 
-## 본격적으로 알고리즘을 구현해보자
+# 본격적으로 알고리즘을 구현해보자
