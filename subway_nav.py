@@ -50,45 +50,48 @@ class WindowClass(QMainWindow, form_class):
         # 부모 클래스의 init을 상속받음
         super().__init__()
         self.setupUi(self)
-        global graph
-        global node
-        global location
         
+        global graph
         # 지하철 역 이름을 모두 PyQt 의 stations(지하철 역 List) 영역에 업로드
         for i in graph:
             # 지하철 역 이름이 담길 list 이름은 stations이라고 만들어줬음.
             self.stations.addItem(i[0])
-            
-        # 선택버튼 클릭시 실행될 메소드
-        def locationAdd(self):
-            # 현재 stations에 존재하는 값을 selected에 addItem해주는 코드
-            if len(self.selected) == 2:
-                self.selected.take
-            self.selected.addItem(graph[self.stations.currentRow()][0])
-        
-        # 삭제 버튼 클릭시 실행될 메소드
-        def locationDelete(self):
-            self.removeItemRow = self.selected.currentRow()
-            self.selected.takeItem(self.removeItemRow)
-        
-        # 노드와 좌표를 활용해 위치를 찾아주는 메소드
-        def findLocation(self, node, location):
-            point = []
-            for n in node:
-                for l in location:
-                    # 이름을 읽어서 확인하는것
-                    # 이때, 각 역은 line을 문자열에 ()형태로 포함하기 때문에, 역 이름만 추출하기 위해 slicing해줌
-                    # 다만, 역마다 문자열 길이가 다르기 때문에, 뒤에서부터 읽어줌. >> 문자열이 반전됨
-                    if n[-4::-1] == l[0][-1::-1]:
-                        point.append([float(i[1]), float(i[2])])
-                        break
-            return point
         
         
-        # 실행버튼 클릭시 실행될 메소드
-        def programRun(self):
-            start = self.selected.item(0).text()
-            end = self.selected.item(1).text()
+    # 선택버튼 클릭시 실행될 메소드
+    def locationAdd(self):
+        global graph
+        
+        # 현재 stations에 존재하는 값을 selected에 addItem해주는 코드
+        if len(self.selected) == 2:
+            self.selected.take
+        self.selected.addItem(graph[self.stations.currentRow()][0])
+    
+    # 삭제 버튼 클릭시 실행될 메소드
+    def locationDelete(self):
+        self.removeItemRow = self.selected.currentRow()
+        self.selected.takeItem(self.removeItemRow)
+    
+    # 노드와 좌표를 활용해 위치를 찾아주는 메소드
+    def findLocation(self):
+        global node
+        global location
+        point = []
+        for n in node:
+            for l in location:
+                # 이름을 읽어서 확인하는것
+                # 이때, 각 역은 line을 문자열에 ()형태로 포함하기 때문에, 역 이름만 추출하기 위해 slicing해줌
+                # 다만, 역마다 문자열 길이가 다르기 때문에, 뒤에서부터 읽어줌. >> 문자열이 반전됨
+                if n[-4::-1] == l[0][-1::-1]:
+                    point.append([float(l[1]), float(l[2])])
+                    break
+        return point
+    
+    
+    # 실행버튼 클릭시 실행될 메소드
+    def programRun(self):
+        start = self.selected.item(0).text()
+        end = self.selected.item(1).text()
         
         
         
