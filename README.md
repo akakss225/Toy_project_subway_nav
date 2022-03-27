@@ -91,5 +91,9 @@ location
 # 💻Dijkstra Algorithm 을 활용해 프로그램을 적용시켜보자!
 
 - 선택 버튼 클릭시, UI의 좌측 역 list의 값이 오른쪽 선택된 역으로 이동해야함!
+- 일전에 작성해둔 WindowClass에 <i>locationAdd()</i> 메소드를 구현해준다.
 
-<img width="519" alt="스크린샷 2022-03-27 19 02 48" src="https://user-images.githubusercontent.com/78843098/160276461-3cb11184-1d12-4cd6-9922-b6577e2539fe.png"> <img width="519" alt="스크린샷 2022-03-27 19 02 56" src="https://user-images.githubusercontent.com/78843098/160276466-d6e1f2f6-443e-4f08-8ca7-4965d4c0a8ba.png">
+<img width="1021" alt="스크린샷 2022-03-27 19 02 20" src="https://user-images.githubusercontent.com/78843098/160276491-43deb9cb-dfa2-4622-8970-5f3c9b6a5581.png">
+
+<img width="519" alt="스크린샷 2022-03-27 19 02 48" src="https://user-images.githubusercontent.com/78843098/160276461-3cb11184-1d12-4cd6-9922-b6577e2539fe.png">
+<img width="519" alt="스크린샷 2022-03-27 19 02 56" src="https://user-images.githubusercontent.com/78843098/160276466-d6e1f2f6-443e-4f08-8ca7-4965d4c0a8ba.png">
