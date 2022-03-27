@@ -58,15 +58,15 @@ class WindowClass(QMainWindow, form_class):
             # 지하철 역 이름이 담길 list 이름은 stations이라고 만들어줬음.
             self.stations.addItem(i)
         
+        self.btn_sel.clicked.connect(self.locationAdd)
+        
         
     # 선택버튼 클릭시 실행될 메소드
     def locationAdd(self):
-        global graph
+        global node
         
         # 현재 stations에 존재하는 값을 selected에 addItem해주는 코드
-        if len(self.selected) == 2:
-            self.selected.take
-        self.selected.addItem(graph[self.stations.currentRow()][0])
+        self.selected.addItem(node[self.stations.currentRow()])
     
     # 삭제 버튼 클릭시 실행될 메소드
     def locationDelete(self):
@@ -173,20 +173,19 @@ class Dijkstra:
             
         # 역순으로 넣었기 때문에, 역순으로 호출해주면, 최단시간 경로를 구해준다.
         return path[::-1]
-
-dj = Dijkstra(node)
-# print(dj.g)
-
-# print(dj.getPath("강남(2)", "강변(2)"))
-print(dj.getPath("건대입구(2)", "동대문(4)"))
-
-
-
-# if __name__ == '__main__':
-#     app = QApplication(sys.argv)
-#     myWindow = WindowClass()
-#     myWindow.show()
-#     app.exec_()
     
-# station_name.close()
-# station_loc.close()
+
+# dj = Dijkstra(node)
+
+# print(dj.getPath("건대입구(2)", "동대문(4)"))
+
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    myWindow = WindowClass()
+    myWindow.show()
+    app.exec_()
+    
+station_name.close()
+station_loc.close()

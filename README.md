@@ -51,7 +51,7 @@ location
 
 
 
-# 본격적으로 알고리즘을 구현해보자
+# 💻본격적으로 알고리즘을 구현해보자
 
 - Dijkstra Algorithm의 뼈대를 만든다. 객체를 적극 활용! 추가적으로 출력까지 해본다.
 
@@ -86,3 +86,10 @@ location
 <img width="1130" alt="스크린샷 2022-03-27 18 18 06" src="https://user-images.githubusercontent.com/78843098/160275000-fe17b490-52c4-49e5-a7a2-b40920ba8ba4.png">
 
 
+<hr>
+
+# 💻Dijkstra Algorithm 을 활용해 프로그램을 적용시켜보자!
+
+- 선택 버튼 클릭시, UI의 좌측 역 list의 값이 오른쪽 선택된 역으로 이동해야함!
+
+<img width="519" alt="스크린샷 2022-03-27 19 02 48" src="https://user-images.githubusercontent.com/78843098/160276461-3cb11184-1d12-4cd6-9922-b6577e2539fe.png"> <img width="519" alt="스크린샷 2022-03-27 19 02 56" src="https://user-images.githubusercontent.com/78843098/160276466-d6e1f2f6-443e-4f08-8ca7-4965d4c0a8ba.png">
