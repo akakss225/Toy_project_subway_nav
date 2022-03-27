@@ -95,5 +95,15 @@ location
 
 <img width="1021" alt="스크린샷 2022-03-27 19 02 20" src="https://user-images.githubusercontent.com/78843098/160276491-43deb9cb-dfa2-4622-8970-5f3c9b6a5581.png">
 
+### 🔥🔥 성공적...?
+
 <img width="519" alt="스크린샷 2022-03-27 19 02 48" src="https://user-images.githubusercontent.com/78843098/160276461-3cb11184-1d12-4cd6-9922-b6577e2539fe.png">
 <img width="519" alt="스크린샷 2022-03-27 19 02 56" src="https://user-images.githubusercontent.com/78843098/160276466-d6e1f2f6-443e-4f08-8ca7-4965d4c0a8ba.png">
+
+- 일줄알았으나...
+
+<img width="519" alt="스크린샷 2022-03-27 19 03 09" src="https://user-images.githubusercontent.com/78843098/160276468-1d5c25a5-01f1-4c05-9692-33bfcef97d4a.png">
+
+여러개가 추가가 된다...
+
+이를 해결하기 위해 UI를 조금 설계해야할듯 합니다...
