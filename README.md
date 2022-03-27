@@ -76,3 +76,13 @@ location
 <img width="1015" alt="스크린샷 2022-03-27 18 11 57" src="https://user-images.githubusercontent.com/78843098/160274829-45865957-7946-4100-b85f-bf3a511892be.png">
 <img width="1015" alt="스크린샷 2022-03-27 18 12 12" src="https://user-images.githubusercontent.com/78843098/160274898-4cce3cca-6dca-4cc8-b97c-16e1c92dea28.png">
 <img width="1015" alt="스크린샷 2022-03-27 18 12 25" src="https://user-images.githubusercontent.com/78843098/160274905-fc995312-9d40-47c7-9d62-2df2cde71247.png">
+
+- 예시로 강남(2) ~ 강변(2) 의 경로를 구해보자.
+
+<img width="1015" alt="스크린샷 2022-03-27 18 17 52" src="https://user-images.githubusercontent.com/78843098/160274983-83f6a589-71f1-4c82-ac54-0b2c0fe192e5.png">
+
+### 🔥🔥 성공적
+
+<img width="1130" alt="스크린샷 2022-03-27 18 18 06" src="https://user-images.githubusercontent.com/78843098/160275000-fe17b490-52c4-49e5-a7a2-b40920ba8ba4.png">
+
+

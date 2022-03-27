@@ -172,10 +172,13 @@ class Dijkstra:
             end = self.dist[end][1]
             
         # 역순으로 넣었기 때문에, 역순으로 호출해주면, 최단시간 경로를 구해준다.
-        return path[::-1], dist
+        return path[::-1]
 
 dj = Dijkstra(node)
-print(dj.getPath("강남(2)", "강변(2)"))
+# print(dj.g)
+
+# print(dj.getPath("강남(2)", "강변(2)"))
+print(dj.getPath("건대입구(2)", "동대문(4)"))
 
 
 
