@@ -107,3 +107,7 @@ location
 여러개가 추가가 된다...
 
 이를 해결하기 위해 UI를 조금 설계해야할듯 합니다...
+
+조금 바꾼 UI
+
+<img width="519" alt="스크린샷 2022-03-27 19 12 32" src="https://user-images.githubusercontent.com/78843098/160276729-27bce452-896f-443a-b1d6-ce69f1d7f00a.png">
