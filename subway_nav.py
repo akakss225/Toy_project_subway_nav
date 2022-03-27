@@ -66,7 +66,19 @@ class WindowClass(QMainWindow, form_class):
         global node
         
         # 현재 stations에 존재하는 값을 selected에 addItem해주는 코드
-        self.selected.addItem(node[self.stations.currentRow()])
+        if len(self.arrive) > 0:
+            # 도착역이 이미 있다면 출발역과 도착역을 reset하고, 다시 출발역부터 채워준다.
+            self.start.takeItem(0)
+            self.arrive.takeItem(0)
+            self.start.addItem(node[self.stations.currentRow()])
+        else:
+            # 도착역이 비어있다면
+            if len(self.start) > 0:
+                # 출발역이 지정되었으면 도착역을 지정해준다.
+                self.arrive.addItem(node[self.stations.currentRow()])
+            else:
+                # 출발역이 지정되있지않다면, 출발역먼저 지정해준다.
+                self.start.addItem(node[self.stations.currentRow()])
     
     # 삭제 버튼 클릭시 실행될 메소드
     def locationDelete(self):

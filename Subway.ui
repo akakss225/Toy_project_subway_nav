@@ -59,6 +59,11 @@
       <height>32</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="text">
      <string>선택</string>
     </property>
@@ -72,6 +77,11 @@
       <height>32</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="text">
      <string>경로탐색</string>
     </property>
@@ -84,6 +94,11 @@
       <width>100</width>
       <height>32</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="text">
      <string>삭제</string>
@@ -117,12 +132,6 @@
       <width>81</width>
       <height>21</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>BM Dohyeon</family>
-      <bold>true</bold>
-     </font>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;도착역&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>

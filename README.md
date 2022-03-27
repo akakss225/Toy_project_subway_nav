@@ -108,6 +108,18 @@ location
 
 이를 해결하기 위해 UI를 조금 설계해야할듯 합니다...
 
-조금 바꾼 UI
+- 조금 바꾼 UI
 
 <img width="519" alt="스크린샷 2022-03-27 19 12 32" src="https://user-images.githubusercontent.com/78843098/160276729-27bce452-896f-443a-b1d6-ce69f1d7f00a.png">
+
+- 조금 바꾼 <i>locationAdd()</i> 메소드
+
+<img width="1001" alt="스크린샷 2022-03-27 19 29 54" src="https://user-images.githubusercontent.com/78843098/160277312-a92d9fd8-90e8-4db9-a288-b6848658c0a5.png">
+
+- 두근두근....
+
+<img width="518" alt="스크린샷 2022-03-27 19 31 36" src="https://user-images.githubusercontent.com/78843098/160277347-37f858c9-6715-4e03-a255-1b77dd0587b4.png">
+
+### 🔥🔥 성공적!!
+
+<img width="518" alt="스크린샷 2022-03-27 19 31 41" src="https://user-images.githubusercontent.com/78843098/160277351-63921dca-93e5-4b4c-b5d7-143fc22bbc60.png">
