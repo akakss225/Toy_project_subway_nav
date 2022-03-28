@@ -127,7 +127,7 @@ location
 
 - 그럼 다음으로 Delete 기능을 구현해야한다. 따라서 <i>locationDelete()</i> 메소드를 구현해준다.
 
-<img width="999" alt="스크린샷 2022-03-28 19 21 08" src="https://user-images.githubusercontent.com/78843098/160378559-9cfc7cde-7793-48ab-b529-1681f43298aa.png">
+<img width="991" alt="스크린샷 2022-03-28 19 32 18" src="https://user-images.githubusercontent.com/78843098/160379998-c5284d2c-56f0-4413-b301-a0a69b838986.png">
 
 - 🛠 참고로 WindowClass 생성자인 __init__ 에 아래와 같이 click이벤트를 연결해줘야 됨!
 
@@ -142,3 +142,12 @@ location
 <img width="516" alt="스크린샷 2022-03-28 19 21 29" src="https://user-images.githubusercontent.com/78843098/160378941-bf1b2986-af74-4d4d-9022-e091d7487b10.png">
 <img width="516" alt="스크린샷 2022-03-28 19 21 37" src="https://user-images.githubusercontent.com/78843098/160378950-859fc3d4-eee2-405a-b811-98ada8486200.png">
 
+- 이제 실제로 프로그램을 실행시키기 위한 메소드를 작성해야한다!
+
+기본적으로 Dijkstra Algorithm을 활용해 경로상의 역 명을 list형태로 받아봤다.
+
+따라서 역 명을 기준으로 location list를 활용해 각 역의 좌표를 구하는 코드가 필요하다.
+
+- <i>findLocation()</i>은 UI에서 입력받은 역 간 최단거리를 나타내는 list를 통해 좌표를 구해주는 메소드다.
+
+<img width="991" alt="스크린샷 2022-03-28 19 50 11" src="https://user-images.githubusercontent.com/78843098/160382821-b7c01710-2c38-46ea-a8ae-e4b10da129be.png">

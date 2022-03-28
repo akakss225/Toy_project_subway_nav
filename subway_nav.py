@@ -93,13 +93,12 @@ class WindowClass(QMainWindow, form_class):
         # 따라서 무엇이 선택되었는지 확인하고 제거함.
         if self.removeItemRow1 == 0:
             self.start.takeItem(self.removeItemRow1)
-        else:
+        elif self.removeItemRow2 == 0:
             self.arrive.takeItem(self.removeItemRow2)
         
-    # 노드와 좌표를 활용해 위치를 찾아주는 메소드
-    def findLocation(self):
-        global node
-        global location
+    # node와 location을 활용해 좌표를 찾아주는 메소드
+    # folium을 활용해 맵에 좌표를 찍기위함
+    def findLocation(self, node, location):
         point = []
         for n in node:
             for l in location:
@@ -110,6 +109,7 @@ class WindowClass(QMainWindow, form_class):
                     point.append([float(l[1]), float(l[2])])
                     break
         return point
+    
     
     
     # 실행버튼 클릭시 실행될 메소드
@@ -198,17 +198,17 @@ class Dijkstra:
         return path[::-1]
     
 
-# dj = Dijkstra(node)
+dj = Dijkstra(node)
 
-# print(dj.getPath("건대입구(2)", "동대문(4)"))
+print(dj.getPath("건대입구(2)", "동대문(4)"))
 
 
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    myWindow = WindowClass()
-    myWindow.show()
-    app.exec_()
+# if __name__ == '__main__':
+#     app = QApplication(sys.argv)
+#     myWindow = WindowClass()
+#     myWindow.show()
+#     app.exec_()
     
 station_name.close()
 station_loc.close()
