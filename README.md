@@ -123,3 +123,22 @@ location
 ### 🔥🔥 성공적!!
 
 <img width="518" alt="스크린샷 2022-03-27 19 31 41" src="https://user-images.githubusercontent.com/78843098/160277351-63921dca-93e5-4b4c-b5d7-143fc22bbc60.png">
+
+
+- 그럼 다음으로 Delete 기능을 구현해야한다. 따라서 <i>locationDelete()</i> 메소드를 구현해준다.
+
+<img width="999" alt="스크린샷 2022-03-28 19 21 08" src="https://user-images.githubusercontent.com/78843098/160378559-9cfc7cde-7793-48ab-b529-1681f43298aa.png">
+
+- 🛠 참고로 WindowClass 생성자인 __init__ 에 아래와 같이 click이벤트를 연결해줘야 됨!
+
+<img width="999" alt="스크린샷 2022-03-28 19 19 43" src="https://user-images.githubusercontent.com/78843098/160378802-bf10ebf4-8fac-4b31-a41d-756e5533bf68.png">
+
+- 결과는..?
+
+<img width="516" alt="스크린샷 2022-03-28 19 21 24" src="https://user-images.githubusercontent.com/78843098/160378868-dd48d10e-4dab-4474-b22c-64c06d6708bc.png">
+
+### 🔥🔥 성공적
+
+<img width="516" alt="스크린샷 2022-03-28 19 21 29" src="https://user-images.githubusercontent.com/78843098/160378941-bf1b2986-af74-4d4d-9022-e091d7487b10.png">
+<img width="516" alt="스크린샷 2022-03-28 19 21 37" src="https://user-images.githubusercontent.com/78843098/160378950-859fc3d4-eee2-405a-b811-98ada8486200.png">
+

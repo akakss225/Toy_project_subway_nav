@@ -59,6 +59,7 @@ class WindowClass(QMainWindow, form_class):
             self.stations.addItem(i)
         
         self.btn_sel.clicked.connect(self.locationAdd)
+        self.btn_del.clicked.connect(self.locationDelete)
         
         
     # 선택버튼 클릭시 실행될 메소드
@@ -82,9 +83,19 @@ class WindowClass(QMainWindow, form_class):
     
     # 삭제 버튼 클릭시 실행될 메소드
     def locationDelete(self):
-        self.removeItemRow = self.selected.currentRow()
-        self.selected.takeItem(self.removeItemRow)
-    
+        # 삭제시 선택될 역은 두가지임!
+        
+        # 첫번째로 출발역
+        self.removeItemRow1 = self.start.currentRow()
+        # 두번째로 도착역
+        self.removeItemRow2 = self.arrive.currentRow()
+        
+        # 따라서 무엇이 선택되었는지 확인하고 제거함.
+        if self.removeItemRow1 == 0:
+            self.start.takeItem(self.removeItemRow1)
+        else:
+            self.arrive.takeItem(self.removeItemRow2)
+        
     # 노드와 좌표를 활용해 위치를 찾아주는 메소드
     def findLocation(self):
         global node
