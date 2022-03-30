@@ -110,6 +110,16 @@ class WindowClass(QMainWindow, form_class):
                     break
         return point
     
+    # findLocation 메소드로 구한 좌표를 folium을 활용해 맵에 나타내는 메소드
+    def mapping(node):
+        m = folium.Map(
+        # location 속성에 좌표를 입력해줌
+        location=node[0],
+        # zoom_start는 초기 크기를 설정해주는 속성
+        zoom_start=17
+        )
+        # 현재 디렉토리에 html형태로 저장하겠다라는것을 의미.
+        m.save("map.html")
     
     
     # 실행버튼 클릭시 실행될 메소드
@@ -201,6 +211,9 @@ class Dijkstra:
 dj = Dijkstra(node)
 
 print(dj.getPath("건대입구(2)", "동대문(4)"))
+
+
+
 
 
 

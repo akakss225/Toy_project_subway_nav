@@ -151,3 +151,8 @@ location
 - <i>findLocation()</i>은 UI에서 입력받은 역 간 최단거리를 나타내는 list를 통해 좌표를 구해주는 메소드다.
 
 <img width="991" alt="스크린샷 2022-03-28 19 50 11" src="https://user-images.githubusercontent.com/78843098/160382821-b7c01710-2c38-46ea-a8ae-e4b10da129be.png">
+
+
+- 이후, findLocation 메소드의 결과로 folium을 사용해줄 <i>mapping()</i> 메소드를 구현해준다.
+
+<img width="991" alt="스크린샷 2022-03-30 14 24 07" src="https://user-images.githubusercontent.com/78843098/160757235-5a95a9ea-8bf6-4277-81b8-835358247922.png">
