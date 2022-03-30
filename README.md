@@ -176,3 +176,24 @@ location
 우선, 시작역의 위치만을 찍은것이기 때문에, 경복궁역의 위치가 출력되는것을 볼 수 있다!
 
 이제 완벽한 네비게이션의 기능을 보여주고자 출발역과 도착역에 Marker를 달아보자.
+
+- <i>mapping()</i> 메소드 리펙토링
+
+<img width="1005" alt="스크린샷 2022-03-30 14 44 31" src="https://user-images.githubusercontent.com/78843098/160759754-dbe6edf8-2474-4c03-a5aa-ee85ef8a64fd.png">
+
+- 실행결과
+
+<img width="1005" alt="스크린샷 2022-03-30 14 45 54" src="https://user-images.githubusercontent.com/78843098/160759914-6474cbd4-87d5-407c-9fb8-54328012d7f1.png">
+
+출발역은 빨간색, 도착역은 파란색 마커가 찍힌것을 볼 수 있다!
+
+- 마지막으로, 각 역간 이동경로를 연결시켜줘야한다!
+
+<img width="1005" alt="스크린샷 2022-03-30 14 55 14" src="https://user-images.githubusercontent.com/78843098/160761171-60c4788a-0e68-4369-acf7-2a6bea1a5511.png">
+
+- 실행결과
+
+<img width="1005" alt="스크린샷 2022-03-30 14 55 24" src="https://user-images.githubusercontent.com/78843098/160761158-0a3a35e3-9b1f-4929-b006-3905644d3924.png">
+
+마지막으로, 처음 맵이 보여주는 위치를 역의 중간으로 잡아주는 코드를 짠다!
+

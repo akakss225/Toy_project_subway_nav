@@ -117,8 +117,26 @@ class WindowClass(QMainWindow, form_class):
         # location 속성에 좌표를 입력해줌
         location=node[0],
         # zoom_start는 초기 크기를 설정해주는 속성
-        zoom_start=17
+        zoom_start=15
         )
+        
+        # 출발역에 마커 찍기
+        folium.Marker(
+            location = node[0],
+            icon=folium.Icon("red")
+        ).add_to(m)
+        
+        # 도착역에 마커 찍기
+        folium.Marker(
+            location = node[-1],
+            icon=folium.Icon("blue")
+        ).add_to(m)
+        
+        # 각 역간 이동경로 그리기
+        folium.PolyLine(
+            locations=node
+        ).add_to(m)
+        
         # 현재 디렉토리에 html형태로 저장하겠다라는것을 의미.
         m.save("map.html")
     
