@@ -209,3 +209,5 @@ location
 
 <img width="809" alt="스크린샷 2022-03-30 15 00 57" src="https://user-images.githubusercontent.com/78843098/160761866-c3ade1fd-3071-4370-bb6d-42f9c5110e5e.png">
 
+
+# 원래는 이렇게하고 마무리 하려고했으나... 아무래도 만든 map.html 파일을 읽고 보여주는 UI가 있으면 더 좋을듯해 구현하기로한다.
