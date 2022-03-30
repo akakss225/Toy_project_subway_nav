@@ -113,11 +113,14 @@ class WindowClass(QMainWindow, form_class):
     
     # findLocation 메소드로 구한 좌표를 folium을 활용해 맵에 나타내는 메소드
     def mapping(self, node):
+        
+        middle = len(node) // 2
+        
         m = folium.Map(
         # location 속성에 좌표를 입력해줌
-        location=node[0],
+        location=node[middle],
         # zoom_start는 초기 크기를 설정해주는 속성
-        zoom_start=15
+        zoom_start=14
         )
         
         # 출발역에 마커 찍기

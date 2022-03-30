@@ -197,3 +197,15 @@ location
 
 마지막으로, 처음 맵이 보여주는 위치를 역의 중간으로 잡아주는 코드를 짠다!
 
+- 중간지점을 간단하게 구해주고, location을 middle로 바꿔주면 된다!
+
+<img width="1005" alt="스크린샷 2022-03-30 14 58 22" src="https://user-images.githubusercontent.com/78843098/160761530-24fc164a-5638-497c-9f99-203587a1a828.png">
+
+<img width="809" alt="스크린샷 2022-03-30 14 59 52" src="https://user-images.githubusercontent.com/78843098/160761697-7f49e608-b060-4b82-93b1-5fb77f04f057.png">
+
+근데 너무 작은거 같으니 zoom_size 를 14로 해준다.
+
+### 🔥🔥 성공적
+
+<img width="809" alt="스크린샷 2022-03-30 15 00 57" src="https://user-images.githubusercontent.com/78843098/160761866-c3ade1fd-3071-4370-bb6d-42f9c5110e5e.png">
+
