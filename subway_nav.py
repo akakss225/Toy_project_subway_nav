@@ -15,7 +15,7 @@ import csv
 from PyQt5.QtWidgets import *
 # ui 파일을 불러올 모듈
 from PyQt5 import uic
-
+# 입출력
 import sys
 
 
@@ -120,7 +120,7 @@ class WindowClass(QMainWindow, form_class):
         # location 속성에 좌표를 입력해줌
         location=node[middle],
         # zoom_start는 초기 크기를 설정해주는 속성
-        zoom_start=14
+        zoom_start=13
         )
         
         # 출발역에 마커 찍기
@@ -164,6 +164,7 @@ class WindowClass(QMainWindow, form_class):
         path = self.findLocation(dj.getPath(start, end), location)
         
         self.mapping(path)
+        
         
 
 class Dijkstra:
