@@ -156,3 +156,23 @@ location
 - 이후, findLocation 메소드의 결과로 folium을 사용해줄 <i>mapping()</i> 메소드를 구현해준다.
 
 <img width="991" alt="스크린샷 2022-03-30 14 24 07" src="https://user-images.githubusercontent.com/78843098/160757235-5a95a9ea-8bf6-4277-81b8-835358247922.png">
+
+- 네비게이션의 꽃인 경로를 찾아주고, 맵에 띄워주는 '실행' 버튼 구현!
+
+<img width="991" alt="스크린샷 2022-03-30 14 35 26" src="https://user-images.githubusercontent.com/78843098/160758543-3cd7ddf3-736c-4a26-8c11-8c16d60d2f87.png">
+
+<img width="991" alt="스크린샷 2022-03-30 14 35 36" src="https://user-images.githubusercontent.com/78843098/160758550-9de02325-5e64-4e63-9fcd-61e88ca7afb0.png">
+
+- 두근두근 실행!
+
+<img width="518" alt="스크린샷 2022-03-30 14 37 52" src="https://user-images.githubusercontent.com/78843098/160758824-1e16abbf-daf0-4f25-bb95-7b82708e9bf2.png">
+
+<img width="202" alt="스크린샷 2022-03-30 14 38 03" src="https://user-images.githubusercontent.com/78843098/160758859-57ed8d52-4631-4af5-b119-7bf63748c30f.png">
+
+- 짜자잔~
+
+<img width="1440" alt="스크린샷 2022-03-30 14 38 52" src="https://user-images.githubusercontent.com/78843098/160759043-6994e114-defe-4d1f-b985-07c2d7119fdf.png">
+
+우선, 시작역의 위치만을 찍은것이기 때문에, 경복궁역의 위치가 출력되는것을 볼 수 있다!
+
+이제 완벽한 네비게이션의 기능을 보여주고자 출발역과 도착역에 Marker를 달아보자.

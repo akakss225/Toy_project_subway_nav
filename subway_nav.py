@@ -60,6 +60,7 @@ class WindowClass(QMainWindow, form_class):
         
         self.btn_sel.clicked.connect(self.locationAdd)
         self.btn_del.clicked.connect(self.locationDelete)
+        self.btn_run.clicked.connect(self.programRun)
         
         
     # 선택버튼 클릭시 실행될 메소드
@@ -111,7 +112,7 @@ class WindowClass(QMainWindow, form_class):
         return point
     
     # findLocation 메소드로 구한 좌표를 folium을 활용해 맵에 나타내는 메소드
-    def mapping(node):
+    def mapping(self, node):
         m = folium.Map(
         # location 속성에 좌표를 입력해줌
         location=node[0],
@@ -123,10 +124,25 @@ class WindowClass(QMainWindow, form_class):
     
     
     # 실행버튼 클릭시 실행될 메소드
+    # 위에서 작성한 findLocation / mapping 메소드를 활용해야함!
     def programRun(self):
-        start = self.selected.item(0).text()
-        end = self.selected.item(1).text()
+        global node
+        global location
         
+        # 다익스트라 알고리즘 객체를 생성!
+        dj = Dijkstra(node)
+        
+        # 출발역 정보
+        start = self.start.item(0).text()
+        # 도착역 정보
+        end = self.arrive.item(0).text()
+        
+        # 다익스트라 알고리즘의 최단경로를 구하는 getPath를 이용해 node를 만들고
+        # 이에대한 좌표를 구해주는 findLocation 메소드를 사용
+        # 결과적으로 path 에 좌표가 입력됨.
+        path = self.findLocation(dj.getPath(start, end), location)
+        
+        self.mapping(path)
         
 
 class Dijkstra:
@@ -208,20 +224,16 @@ class Dijkstra:
         return path[::-1]
     
 
-dj = Dijkstra(node)
-
-print(dj.getPath("건대입구(2)", "동대문(4)"))
 
 
 
 
 
-
-# if __name__ == '__main__':
-#     app = QApplication(sys.argv)
-#     myWindow = WindowClass()
-#     myWindow.show()
-#     app.exec_()
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    myWindow = WindowClass()
+    myWindow.show()
+    app.exec_()
     
 station_name.close()
 station_loc.close()
