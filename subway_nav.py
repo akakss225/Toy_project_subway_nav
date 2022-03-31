@@ -6,6 +6,7 @@
 # 다익스트라 알고리즘은 현재 노드를 통해 연결된 노드로 가는 것과 다른 경로를 통해 가는 cost를 비교하여 더 작은 cost가 있을 경우, 업데이트 하는 방법이다.
 
 # 지도 시각화 모듈
+from turtle import color
 import folium
 # 지도에 Marking을 하는 기능
 from folium.map import Marker
@@ -18,6 +19,10 @@ from PyQt5 import uic
 # 입출력
 import sys
 
+# HTML파일을 을 읽을 모듈
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWebEngineWidgets import *
 
 
 # PyQt5를 활용해 만든 간단한 UI를 불러옴
@@ -43,6 +48,21 @@ def nodes(graph):
 
 # 역의 이름이 전부 들어있는 set
 node = nodes(graph)
+
+
+class MapWindow(QWidget):
+    def __init__(self, parent=None):
+        super().__init__()
+        self.layout = QVBoxLayout()
+        self.browser = QWebEngineView()
+        self.layout.addWidget(self.browser)
+        self.setLayout(self.layout)
+        with open("map.html", "r") as f:
+            html = f.read()
+            self.browser.setHtml(html)
+        
+        self.setWindowTitle("노선 경로")
+    
 
 
 # 불러온 UI class를 생성해주고, 이를 활용하기위한 메소드들을 넣어줌
@@ -126,13 +146,13 @@ class WindowClass(QMainWindow, form_class):
         # 출발역에 마커 찍기
         folium.Marker(
             location = node[0],
-            icon=folium.Icon("red")
+            icon=folium.Icon("blue")
         ).add_to(m)
         
         # 도착역에 마커 찍기
         folium.Marker(
             location = node[-1],
-            icon=folium.Icon("blue")
+            icon=folium.Icon("red")
         ).add_to(m)
         
         # 각 역간 이동경로 그리기
@@ -162,9 +182,7 @@ class WindowClass(QMainWindow, form_class):
         # 이에대한 좌표를 구해주는 findLocation 메소드를 사용
         # 결과적으로 path 에 좌표가 입력됨.
         path = self.findLocation(dj.getPath(start, end), location)
-        
         self.mapping(path)
-        
         
 
 class Dijkstra:
@@ -253,7 +271,8 @@ class Dijkstra:
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    myWindow = WindowClass()
+    # myWindow = WindowClass()
+    myWindow = MapWindow()
     myWindow.show()
     app.exec_()
     

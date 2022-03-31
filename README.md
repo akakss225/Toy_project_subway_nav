@@ -211,3 +211,19 @@ location
 
 
 ## 원래는 이렇게하고 마무리 하려고했으나... 아무래도 만든 map.html 파일을 읽고 보여주는 UI가 있으면 더 좋을듯해 구현하기로한다.
+
+<hr>
+
+# 💻 html 파일을 PyQt를 활용해 새 UI를 여는 코드를 만들어보자.
+
+- 우선 html을 열기위한 모듈을 넣어준다.
+
+<img width="941" alt="스크린샷 2022-03-31 17 48 22" src="https://user-images.githubusercontent.com/78843098/161015831-0ce9154f-87cb-4ac3-8215-8488cd1202d8.png">
+
+- 이후 이를 열어줄 객체 생성!
+
+<img width="941" alt="스크린샷 2022-03-31 17 50 46" src="https://user-images.githubusercontent.com/78843098/161016221-de1fad4e-07c2-474e-8b10-aaa8bd903ecf.png">
+
+- 한번 띄워보자!
+
+<img width="941" alt="스크린샷 2022-03-31 17 51 24" src="https://user-images.githubusercontent.com/78843098/161016356-645baa80-5621-48f0-abd9-ae7f299aee33.png">
