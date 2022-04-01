@@ -231,3 +231,17 @@ location
 ### 🔥🔥 성공적
 
 <img width="839" alt="스크린샷 2022-03-31 17 53 10" src="https://user-images.githubusercontent.com/78843098/161016720-94e09519-4ddf-48f3-8b20-476b8d0b53f6.png">
+
+
+- 이제 이 두 GUI를 합쳐야한다! 그러기 위해 WindowClass의 생성자에 객체를 호출해준다!
+
+<img width="963" alt="스크린샷 2022-04-01 13 11 52" src="https://user-images.githubusercontent.com/78843098/161193595-03fe6ce6-4f1f-4a3c-ba32-6a38035bfdfd.png">
+
+- 이후 <i>programRun()</i>메소드에 MapWindow() 객체를 보여주면....!
+
+<img width="963" alt="스크린샷 2022-04-01 13 13 20" src="https://user-images.githubusercontent.com/78843098/161193695-6cdc50a8-d988-4a62-9747-725ae1d43e77.png">
+
+### 🔥🔥 성공적
+
+<img width="518" alt="스크린샷 2022-04-01 13 16 33" src="https://user-images.githubusercontent.com/78843098/161193991-6ce676ad-eca0-44eb-9fac-a913ec8bbbde.png">
+<img width="841" alt="스크린샷 2022-04-01 13 16 45" src="https://user-images.githubusercontent.com/78843098/161193980-982f0727-8c2f-4018-b376-49fe9047e750.png">

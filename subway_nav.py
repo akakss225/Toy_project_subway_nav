@@ -80,6 +80,8 @@ class WindowClass(QMainWindow, form_class):
         
         self.btn_sel.clicked.connect(self.locationAdd)
         self.btn_del.clicked.connect(self.locationDelete)
+        
+        self.mapwindow = MapWindow()
         self.btn_run.clicked.connect(self.programRun)
         
         
@@ -183,6 +185,7 @@ class WindowClass(QMainWindow, form_class):
         # 결과적으로 path 에 좌표가 입력됨.
         path = self.findLocation(dj.getPath(start, end), location)
         self.mapping(path)
+        self.mapwindow.show()
         
 
 class Dijkstra:
@@ -266,13 +269,10 @@ class Dijkstra:
 
 
 
-
-
-
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    # myWindow = WindowClass()
-    myWindow = MapWindow()
+    myWindow = WindowClass()
+    # myWindow = MapWindow()
     myWindow.show()
     app.exec_()
     
