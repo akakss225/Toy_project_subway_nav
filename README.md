@@ -2,7 +2,7 @@
 
 # 시연 영상
 
-<iframe width="928" height="580" src="https://www.youtube.com/embed/m34Zhqrgecs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Video Label](http://img.youtube.com/vi/m34Zhqrgecs/0.jpg)](https://youtu.be/m34Zhqrgecs)
 
 ## 이번 Toy_Project는 Python + PyQT + Dijkstra Algorithm을 활용한 지하철 네비게이션 프로그램 개발이다.
 
