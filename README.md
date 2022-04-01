@@ -1,5 +1,9 @@
 # Toy_project_subway_nav
 
+# 시연 영상
+
+<iframe width="928" height="580" src="https://www.youtube.com/embed/m34Zhqrgecs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 이번 Toy_Project는 Python + PyQT + Dijkstra Algorithm을 활용한 지하철 네비게이션 프로그램 개발이다.
 
 1. 지도시각화 도구인 folium 라이브러리를 사용할것
@@ -286,3 +290,7 @@ self.start.addItem(node[self.stations.currentRow()]) 이 부분에서 뜨는거�
 <img width="838" alt="스크린샷 2022-04-01 14 03 55" src="https://user-images.githubusercontent.com/78843098/161198237-811b62b6-0bc7-4274-b668-cd5590fac72c.png">
 
 <img width="838" alt="스크린샷 2022-04-01 14 04 07" src="https://user-images.githubusercontent.com/78843098/161198227-c00470e6-de85-4aef-8264-209b2c4f78b9.png">
+
+
+# 여기까지, PyQt5 + Dijkstra Algorithm + Python을 활용한 지하철 네비게이션 프로그램 프로젝트를 종료합니다!
+# 봐주셔서 감사합니다~
