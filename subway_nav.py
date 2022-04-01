@@ -47,7 +47,7 @@ def nodes(graph):
     return sorted(node)
 
 # 역의 이름이 전부 들어있는 set
-node = nodes(graph)
+
 
 
 class MapWindow(QWidget):
@@ -71,10 +71,11 @@ class WindowClass(QMainWindow, form_class):
         # 부모 클래스의 init을 상속받음
         super().__init__()
         self.setupUi(self)
+        global graph
         
-        global node
+        self.node = nodes(graph)
         # 지하철 역 이름을 모두 PyQt 의 stations(지하철 역 List) 영역에 업로드
-        for i in node:
+        for i in self.node:
             # 지하철 역 이름이 담길 list 이름은 stations이라고 만들어줬음.
             self.stations.addItem(i)
         
@@ -87,23 +88,22 @@ class WindowClass(QMainWindow, form_class):
         
     # 선택버튼 클릭시 실행될 메소드
     def locationAdd(self):
-        global node
-        
+        print(self.node[:5])
         # 현재 stations에 존재하는 값을 selected에 addItem해주는 코드
         if len(self.arrive) > 0:
             # 도착역이 이미 있다면 출발역과 도착역을 reset하고, 다시 출발역부터 채워준다.
             self.start.takeItem(0)
             self.arrive.takeItem(0)
-            self.start.addItem(node[self.stations.currentRow()])
+            self.start.addItem(self.node[self.stations.currentRow()])
         else:
             # 도착역이 비어있다면
             if len(self.start) > 0:
                 # 출발역이 지정되었으면 도착역을 지정해준다.
-                self.arrive.addItem(node[self.stations.currentRow()])
+                self.arrive.addItem(self.node[self.stations.currentRow()])
             else:
                 # 출발역이 지정되있지않다면, 출발역먼저 지정해준다.
-                self.start.addItem(node[self.stations.currentRow()])
-    
+                self.start.addItem(self.node[self.stations.currentRow()])
+        
     # 삭제 버튼 클릭시 실행될 메소드
     def locationDelete(self):
         # 삭제시 선택될 역은 두가지임!
@@ -169,11 +169,10 @@ class WindowClass(QMainWindow, form_class):
     # 실행버튼 클릭시 실행될 메소드
     # 위에서 작성한 findLocation / mapping 메소드를 활용해야함!
     def programRun(self):
-        global node
         global location
         
         # 다익스트라 알고리즘 객체를 생성!
-        dj = Dijkstra(node)
+        dj = Dijkstra(self.node)
         
         # 출발역 정보
         start = self.start.item(0).text()
@@ -191,12 +190,11 @@ class WindowClass(QMainWindow, form_class):
 class Dijkstra:
     def __init__(self, node):
         # 생성자를 만들때, 그래프를 입력받고, 그래프의 각 노드를 딕셔너리 형태로 만듬.
-        
         # 역
         self.g = {}
         # 최단거리를 구하기 위한 딕셔너리
         self.dist = {}
-        
+        self.node = node
         for n in node:
             # 일종의 HashTableMap
             self.g[n] = {}
@@ -212,10 +210,6 @@ class Dijkstra:
         self.g[end][start] = distance
     
     def getPath(self, start, end):
-        # 미리 만들어둔 node를 전역변수로 선언하고, 지역변수로 바꿔서 사용
-        # 데이터를 삭제시켜야하기 때문
-        global node
-        nodes = node
         
         # 특정 키만 포함되도록 필터링 하는 라인함수
         # dictfilt(dist, nodes) >> 
@@ -230,7 +224,7 @@ class Dijkstra:
         # start to end 최단거리 구하는 Dijkstra Algorithm 몸체 시작
         while True:
             # 재방문을 방지하기 위해 nodes에서 제거시켜줌 >> 방문처리
-            nodes.remove(curNode)
+            self.node.remove(curNode)
             # curNode와 인접한 역 이름 가져오기
             next_to = self.g[curNode]
             
@@ -245,8 +239,8 @@ class Dijkstra:
             
             # 그리디 알고리즘을 통해 모든 노드를 돌아보고 각 node간 관계를 설정하기 위해
             # node의 정보가 들어있는 nodes 가 남아있다면, 빌때까지 반복해야함.
-            if len(nodes) > 0:
-                curNode = min(dictfilt(self.dist, nodes), key=dictfilt(self.dist, nodes).get)
+            if len(self.node) > 0:
+                curNode = min(dictfilt(self.dist, self.node), key=dictfilt(self.dist, self.node).get)
             else:
                 break
         

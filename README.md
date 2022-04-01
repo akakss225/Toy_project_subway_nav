@@ -245,3 +245,19 @@ location
 
 <img width="518" alt="스크린샷 2022-04-01 13 16 33" src="https://user-images.githubusercontent.com/78843098/161193991-6ce676ad-eca0-44eb-9fac-a913ec8bbbde.png">
 <img width="841" alt="스크린샷 2022-04-01 13 16 45" src="https://user-images.githubusercontent.com/78843098/161193980-982f0727-8c2f-4018-b376-49fe9047e750.png">
+
+
+- 오잉...? GUI의 상태가..?
+
+<img width="983" alt="스크린샷 2022-04-01 13 19 05" src="https://user-images.githubusercontent.com/78843098/161194197-460473f5-6995-4082-8efa-159b1f0052a9.png">
+
+MapWindow 종료 후 다시 선택을 누르면, list index out of range가 뜬다...
+
+self.start.addItem(node[self.stations.currentRow()]) 이 부분에서 뜨는거보니...
+
+알고리즘 실행 이후 node 에 값이 비는 현상이 나타나는듯 하다.
+
+- 알고보니... Dijkstra Algorithm 구현 당시 재방문 방지로 node.remove를 사용했었다...
+
+<img width="983" alt="스크린샷 2022-04-01 13 53 04" src="https://user-images.githubusercontent.com/78843098/161197209-53da6520-1d12-4ce8-973e-45b02caceb0b.png">
+
