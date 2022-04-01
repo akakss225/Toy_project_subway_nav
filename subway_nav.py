@@ -184,6 +184,7 @@ class WindowClass(QMainWindow, form_class):
         # 결과적으로 path 에 좌표가 입력됨.
         path = self.findLocation(dj.getPath(start, end), location)
         self.mapping(path)
+        self.mapwindow = MapWindow()
         self.mapwindow.show()
         
 
@@ -194,7 +195,6 @@ class Dijkstra:
         self.g = {}
         # 최단거리를 구하기 위한 딕셔너리
         self.dist = {}
-        self.node = node
         for n in node:
             # 일종의 HashTableMap
             self.g[n] = {}
@@ -211,6 +211,8 @@ class Dijkstra:
     
     def getPath(self, start, end):
         
+        visit = nodes(graph)
+        
         # 특정 키만 포함되도록 필터링 하는 라인함수
         # dictfilt(dist, nodes) >> 
         dictfilt = lambda x, y: dict([(i, x[i]) for i in x if i in set(y)])
@@ -220,11 +222,10 @@ class Dijkstra:
         
         # 현재 노드의 거리는 0으로
         self.dist[curNode][0] = 0
-        
         # start to end 최단거리 구하는 Dijkstra Algorithm 몸체 시작
         while True:
             # 재방문을 방지하기 위해 nodes에서 제거시켜줌 >> 방문처리
-            self.node.remove(curNode)
+            visit.remove(curNode)
             # curNode와 인접한 역 이름 가져오기
             next_to = self.g[curNode]
             
@@ -239,8 +240,8 @@ class Dijkstra:
             
             # 그리디 알고리즘을 통해 모든 노드를 돌아보고 각 node간 관계를 설정하기 위해
             # node의 정보가 들어있는 nodes 가 남아있다면, 빌때까지 반복해야함.
-            if len(self.node) > 0:
-                curNode = min(dictfilt(self.dist, self.node), key=dictfilt(self.dist, self.node).get)
+            if len(visit) > 0:
+                curNode = min(dictfilt(self.dist, visit), key=dictfilt(self.dist, visit).get)
             else:
                 break
         

@@ -261,3 +261,26 @@ self.start.addItem(node[self.stations.currentRow()]) 이 부분에서 뜨는거�
 
 <img width="983" alt="스크린샷 2022-04-01 13 53 04" src="https://user-images.githubusercontent.com/78843098/161197209-53da6520-1d12-4ce8-973e-45b02caceb0b.png">
 
+- 그래서 <i>getPath()</i> 메소드를 실행해야할 때마다 새롭게 node를 만들어주기로 한다...
+
+<img width="983" alt="스크린샷 2022-04-01 13 57 30" src="https://user-images.githubusercontent.com/78843098/161197603-33e0d995-3e67-46fb-9136-ddda11dd5bdb.png">
+
+문제가 해결된듯 싶었으나...
+
+맵이 안바뀌는 초유의 사태가 벌어져따...
+
+하지만 알고보니 map은 바뀌는거지만, GUI에 적용이 안되는것이었다.
+
+- 이제 진짜 마지막... <i>programRun()</i> 메소드 실행시, MapWindow 객체를 리뉴얼 시켜준다..!
+
+결과는
+.
+.
+.
+.
+
+### 🔥🔥 성공적
+
+<img width="838" alt="스크린샷 2022-04-01 14 03 55" src="https://user-images.githubusercontent.com/78843098/161198237-811b62b6-0bc7-4274-b668-cd5590fac72c.png">
+
+<img width="838" alt="스크린샷 2022-04-01 14 04 07" src="https://user-images.githubusercontent.com/78843098/161198227-c00470e6-de85-4aef-8264-209b2c4f78b9.png">
