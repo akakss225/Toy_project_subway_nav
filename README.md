@@ -273,6 +273,8 @@ self.start.addItem(node[self.stations.currentRow()]) 이 부분에서 뜨는거�
 
 - 이제 진짜 마지막... <i>programRun()</i> 메소드 실행시, MapWindow 객체를 리뉴얼 시켜준다..!
 
+<img width="923" alt="스크린샷 2022-04-01 14 06 00" src="https://user-images.githubusercontent.com/78843098/161198387-41cfeeab-0f80-4e24-b565-31c6662236e5.png">
+
 결과는
 .
 .
